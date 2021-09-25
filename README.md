@@ -51,7 +51,7 @@ Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan
 ![image](https://user-images.githubusercontent.com/72771774/134763610-be89a73b-f51a-4827-85d3-6df897f62ddd.png)
 
 - Masukkan username dan passwordnya ke web `basic.ichimarumaru.tech`. Isi jawaban lalu screenshoot.
-![image](https://user-images.githubusercontent.com/72771774/134763719-a610bcf4-2797-4564-a215-a037f4bf57c3.png)
+![image](https://user-images.githubusercontent.com/72771774/134771124-96ae4066-550b-41f1-99b1-a2dabaf11486.png)
 
 ## No 4
 ### Soal
