@@ -26,16 +26,32 @@
 ### Soal
 Sebutkan webserver yang digunakan pada "ichimarumaru.tech"! 
 ### Penjelasan Jawaban
+- Menggunakan display filter 'http.src == "ichimarumaru.tech"'. kemudian pilih baris paling atas > klik kanan > pilih **Follow** > **TCP Stream**
+![image](https://user-images.githubusercontent.com/72771774/134763283-367f7a1a-a71c-4412-94ce-f553e3b86f67.png)
+
+- Maka akan terbuka informasi seperti berikut :
+![image](https://user-images.githubusercontent.com/72771774/134763354-847ada63-b6f9-43ce-92d7-eddd87953c37.png)
+Dari informasi di atas, dapat ditemukan bahwa server yang digunakan adalah `Server: nginx/1.18.0 (Ubuntu)`
 
 ## No 2
 ### Soal
 Temukan paket dari web-web yang menggunakan basic authentication method!
 ### Penjelasan Jawaban
+Untuk menemukan paket dari web-web yang menggunakan basic authentication method, kita bisa menggunakan display filter `http.authbasic`. Untuk hasilnya bisa dilihat pada gambar di bawah ini : 
+![image](https://user-images.githubusercontent.com/72771774/134763384-1a5b6ba3-7c31-48fe-b2e1-2b440c59c39a.png)
 
 ## No 3
 ### Soal
 Ikuti perintah di basic.ichimarumaru.tech! Username dan password bisa didapatkan dari file .pcapng!
 ### Penjelasan Jawaban
+- Masukkan display filter `http.host contains "basic.ichimarumaru.tech"', lalu akan muncul seperti ini :
+![image](https://user-images.githubusercontent.com/72771774/134763495-79bbc913-3b6b-4595-81a8-c7a9433a69d0.png)
+
+- Pilih baris **Hypertext Transfer Protocol** > **Authorization**, maka pada bagian **Credential** akan terdapat user dan password untuk akses web `basic.ichimarumaru.tech`
+![image](https://user-images.githubusercontent.com/72771774/134763610-be89a73b-f51a-4827-85d3-6df897f62ddd.png)
+
+- Masukkan username dan passwordnya ke web `basic.ichimarumaru.tech`. Isi jawaban lalu screenshoot.
+![image](https://user-images.githubusercontent.com/72771774/134763719-a610bcf4-2797-4564-a215-a037f4bf57c3.png)
 
 ## No 4
 ### Soal
@@ -91,6 +107,15 @@ Untuk nomer ini tidak ada kendala dalam pengerjaan.
 ### Soal
 Ada 500 file zip yang disimpan ke FTP Server dengan nama 0.zip, 1.zip, 2.zip, ..., 499.zip. Simpan dan Buka file pdf tersebut. (Hint = nama pdf-nya "Real.pdf")
 ### Penjelasan Jawaban
+- Memasukkan display filter `ftp-data contains Real.pdf`
+![image](https://user-images.githubusercontent.com/72771774/134764437-c4ebc21f-cc66-40a5-bca8-be8c2e78c915.png)
+
+- Pilih baris paling atas > klik kanan > pilih Follow > TCP Stream lalu ganti `ASCII` menjadi `Raw` lalu simpan filenya
+![image](https://user-images.githubusercontent.com/72771774/134764462-1b488575-2d5b-4dcc-9d6a-369dd8304538.png)
+
+- Berikut tampilan file Real.pdf ketika dibuka 
+![image](https://user-images.githubusercontent.com/72771774/134763877-cb373d23-66f9-4a89-8e73-9584d546d790.png)
+
 
 ## No 8
 ### Soal
@@ -106,6 +131,17 @@ Kendala dalam pengerjaan soal ini adalah tidak ditemukannya hasil yang diingikan
 ### Soal
 Dari paket-paket yang menuju FTP terdapat inidkasi penyimpanan beberapa file. Salah satunya adalah sebuah file berisi data rahasia dengan nama "secret.zip". Simpan dan buka file tersebut!
 ### Penjelasan Jawaban
+- Memasukkan filter `ftp-data.command ~ "secret.zip"`
+![image](https://user-images.githubusercontent.com/72771774/134764298-1f1f465e-dc02-4e66-8fd8-0f3bf49139a9.png)
+
+- Lalu klik kanan yang paling atas follow ->TCP Stream. Data disimpan sebagai Raw.
+![image](https://user-images.githubusercontent.com/72771774/134764321-7c2424ca-cb3a-450d-b9d2-e15dff26edb8.png)
+
+- Memasukkan password dari hasil nomor 10
+![image](https://user-images.githubusercontent.com/72771774/134764356-3bc39fbd-a723-41a9-9683-2f50f8097590.png)
+
+- Berikut adalah isi dari Wanted.pdf yang ada di dalam file secret.zip :
+![image](https://user-images.githubusercontent.com/72771774/134764375-34d96ef9-3ead-4b12-b2b7-da5051017e24.png)
 
 ## No 10
 ### Soal
