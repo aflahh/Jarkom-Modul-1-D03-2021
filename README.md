@@ -167,23 +167,42 @@ Untuk nomer ini tidak ada kendala dalam pengerjaan.
 ### Soal
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80! 
 ### Penjelasan Jawaban
+Karena di soal disebutkan "mengambil", maka menggunakan capture filter `src port 80`. Ketika dicoba membuka website yang menggunakan protokol http, maka akan menangkap paket tersebut seperti di gambar berikut:
+![soal11](https://user-images.githubusercontent.com/29938033/134765868-e3a4b945-63ba-4e55-a94f-085c95a2c807.png)
+
 
 ## No 12
 ### Soal
 Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
 ### Penjelasan Jawaban
+Mirip seperti soal 11, menggunakan capture filter `port 21`. Ketika dicoba menghubungkan ke ftp server, akan menangkap paket seperti gambar berikut:
+
+![soal12](https://user-images.githubusercontent.com/29938033/134765913-d60e31f9-56f5-4627-a098-47d069d0b7e3.png)
 
 ## No 13
 ### Soal
 Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
 ### Penjelasan Jawaban
+Karena disebutkan "menampilkan", maka menggunakan display filter `tcp.dstport == 443`. Ketika dicoba membuka website yang menggunakan protokol https, akan menampilkan paket seperti gambar berikut:
+
+![soal13](https://user-images.githubusercontent.com/29938033/134765954-5eb0119c-00ef-4142-8498-308485c19d07.png)
 
 ## No 14
 ### Soal
 Filter sehingga wireshark hanya mengambil paket yang tujuannya ke kemenag.go.id!
 ### Penjelasan Jawaban
+Mirip seperti soal 11 dan 12, menggunakan capture filter `dst host kemenag.go.id`. Ketika dicoba membuka [kemenag.go.id](http://kemenag.go.id/), maka akan menangkap paket seperti di gambar berikut:
+
+![Capture](https://user-images.githubusercontent.com/29938033/134766316-fe964395-7441-46f5-bffa-4923971c4903.PNG)
 
 ## No 15
 ### Soal
 Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
 ### Penjelasan Jawaban
+Untuk mengetahui ip kita, kita bisa menjalankan `ipconfig` di cmd/terminal lalu melihat IPv4 Address seperti di gambar berikut:
+
+![soal15a](https://user-images.githubusercontent.com/29938033/134765973-5292b65a-7ca0-4980-8082-b842640dfa39.jpeg)
+
+Setelah mengetahui ip komputer kita, dalam kasus ini ip-nya `192.168.43.241`, di Wireshark digunakan capture filter `src host 192.168.43.241`. Ketika dicoba membuka website apapun, akan menangkap paket seperti berikut:
+
+![soal15b](https://user-images.githubusercontent.com/29938033/134765980-2ecba9af-6ac0-4031-8cc7-03e9dd009c47.png)
